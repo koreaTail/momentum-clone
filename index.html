@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모멘텀</title>
+    <script src="https://kit.fontawesome.com/6584921572.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="바디마진">
+        <!-- 링크, 돋보기, 날씨  -->
+        <nav class="메인네비">
+            <div class="left">
+                <h4 class="link">Links</h4>
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="right">
+                <!-- weather -->
+                <div class="up">
+                    <i class="far fa-sun"></i>
+                    <strong>14℃</strong>
+                </div>
+                <span>대전</span>
+            </div>
+        </nav>
+        <!-- 시간, 메인 할일 -->
+        <section class="메인섹션">
+            <h1 class="현재시간">15:15</h1>
+            <h2 class="인사">Good afternoon, 테일.</h2>
+            <h3>What is your main focus for today?</h3>
+            <form class="핵심일폼" action="">
+                <input class="핵심일인풋" type="text">
+            </form>
+        </section>
+        <!-- 사진 출처, 명언, todo -->
+        <footer class="메인풋터">
+            <div class="left">    
+                <i class="fas fa-cog"></i>
+                <span>미국에 있는 산</span>
+            </div>
+            <div class="middle">
+                <span class="명언">“An essential part of creativity is not being afraid to fail.”</span>
+            </div>
+            <div class="right">
+                <div class="할일박스">
+                    <nav>
+                        <span>Today ></span>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </nav>
+                    <section>
+                        <h4>Add a todo get started</h4>
+                        <h5>Switch to inbox ></h5>
+                        <button class="할일시작버튼"><span>New Todo</span></button>
+                    </section>
+                    <div class="말풍선만들기"></div>
+                </div>
+                <button class="할일버튼">
+                    <span>ToDo</span>
+                </button>
+            </div>
+        </footer>
+    </div>
+    <script src="time.js"></script>
+</body>
+</html>

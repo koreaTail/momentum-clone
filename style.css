@@ -1,0 +1,27 @@
+*{ box-sizing: border-box; margin: 0; ;}
+body { height: 100vh; overflow: hidden; color: white; background-color:black;}
+.바디마진 { height: 97%; margin: 15px; display: flex; flex-direction: column; justify-content: space-between;}
+.메인네비 { display: flex; justify-content: space-between; align-items: center;}
+.메인네비 .left { display: flex; align-items: center; font-size: 17px;}
+.메인네비 .left i{ margin-left: 8px; font-size: 15px;}
+.메인네비 .right { display: flex; flex-direction: column;}
+.메인네비 .right .up i { font-size: 22px;}
+.메인네비 .right .up strong { font-size: 27px;}
+.메인네비 .right span { font-size: 13px; text-align: right;}
+.메인섹션 { display: flex; flex-direction: column; align-items: center; justify-content: center;}
+.메인섹션 .현재시간 {font-size: 168px;}
+.메인섹션 .인사 {font-size: 54px; margin-bottom: 70px;}
+.메인섹션 h3 {font-size: 35px; margin-bottom: 30px;}
+.메인섹션 .핵심일폼 .핵심일인풋 { border-style: none; border-bottom: 1px solid white; width: 540px; height: 50px; background-color: black;  color: white; font-size: 30px; text-align: center; padding:10px;}
+.메인섹션 .핵심일폼 .핵심일인풋:focus { outline: none; }
+.메인풋터 { display: flex; justify-content: space-between; align-items: center;}
+.메인풋터 .할일박스 {z-index: 10; position: absolute; right: 15px; bottom: 60px; width: 350px; height: 250px; background-color: white; color: black; border-radius: 5px; padding:10px;}
+.메인풋터 .할일박스 nav { display: flex; justify-content: space-between; font-size: 20px; margin: 10px 10px 0px 10px;}
+.메인풋터 .할일박스 section { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+/* 높이가 안맞아. 중앙정렬이 안돼.. */
+.메인풋터 .할일박스 section h4 {font-size: 16px; margin-bottom: 5px; font-weight: 400;} 
+.메인풋터 .할일박스 section h5 {font-size: 14px; margin-bottom: 16px; font-weight: 200; color: dimgray;} 
+.메인풋터 .할일박스 section .할일시작버튼 { width: 116px; height: 31px; border-radius: 10px; border: none; border-style: none; color: white; background-color: rgb(45,62,145); font-size: 14px;}
+.메인풋터 .말풍선만들기 { position: absolute; right: 20px; bottom: -5px; width: 15px; height: 15px; background-color: white; transform: rotate(45deg); }
+.메인풋터 .할일버튼 { border: none; border-style: none; background-color: black; color: white; font-size: 17px;}
+
