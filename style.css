@@ -15,9 +15,9 @@ body { height: 100vh; overflow: hidden; color: white; background-color:black;}
 .메인섹션 .핵심일폼 .핵심일인풋 { border-style: none; border-bottom: 1px solid white; width: 540px; height: 50px; background-color: black;  color: white; font-size: 30px; text-align: center; padding:10px;}
 .메인섹션 .핵심일폼 .핵심일인풋:focus { outline: none; }
 .메인풋터 { display: flex; justify-content: space-between; align-items: center;}
-.메인풋터 .할일박스 {z-index: 10; position: absolute; right: 15px; bottom: 60px; width: 350px; height: 250px; background-color: white; color: black; border-radius: 5px; padding:10px;}
+.메인풋터 .할일박스 {z-index: 10; position: absolute; right: 15px; bottom: 60px; display: flex; flex-direction: column; width: 350px; height: 250px; background-color: white; color: black; border-radius: 5px; padding:10px;}
 .메인풋터 .할일박스 nav { display: flex; justify-content: space-between; font-size: 20px; margin: 10px 10px 0px 10px;}
-.메인풋터 .할일박스 section { display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.메인풋터 .할일박스 section { display: flex; flex-direction: column; justify-content: center; align-items: center; flex-grow:1;}
 /* 높이가 안맞아. 중앙정렬이 안돼.. */
 .메인풋터 .할일박스 section h4 {font-size: 16px; margin-bottom: 5px; font-weight: 400;} 
 .메인풋터 .할일박스 section h5 {font-size: 14px; margin-bottom: 16px; font-weight: 200; color: dimgray;} 
