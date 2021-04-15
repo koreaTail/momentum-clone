@@ -1,6 +1,5 @@
 const 인사 = 메인섹션.querySelector(".인사")
 
-console.log(new Date().getHours())
 
 if (new Date().getHours() > 21) {
     인사.innerHTML = "Good night"
