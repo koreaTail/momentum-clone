@@ -5,9 +5,9 @@ body { height: 100vh; overflow: hidden; color: white; background-color:black; di
 .이름묻기 p { font-size: 55px; margin-bottom: 30px;}
 .이름묻기 input { font-size: 55px; border: none; border-bottom: 1px solid white; background-color: black; color: white; text-align: center; padding: 10px;}
 .이름묻기 input:focus { outline: none;}
-.바디마진 { height: 97%; margin: 15px; display: flex; flex-direction: column; justify-content: space-between;}
+.바디마진 { height: 100%; margin: 15px; display: flex; flex-direction: column; justify-content: space-between;}
 .바디마진.hide { display: none; opacity: 0; height: 0px;}
-.메인네비 { display: flex; justify-content: space-between; align-items: center;}
+.메인네비 { display: flex; justify-content: space-between; align-items:flex-start;}
 .메인네비 .left { display: flex; align-items: center; font-size: 17px;}
 .메인네비 .left i{ margin: 8px; font-size: 15px;}
 .메인네비 .right { display: flex; flex-direction: column;}
