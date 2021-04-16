@@ -1,14 +1,14 @@
-const 인사 = 메인섹션.querySelector(".인사")
+const 인사말 = 메인섹션.querySelector(".인사말")
 
 
 if (new Date().getHours() > 21) {
-    인사.innerHTML = "Good night"
+    인사말.innerHTML = "Good night,"
 } else if (new Date().getHours() > 17) {
-    인사.innerHTML = "Good evening"
+    인사말.innerHTML = "Good evening,"
 } else if (new Date().getHours() > 11) {
-    인사.innerHTML = "Good afternoon"
+    인사말.innerHTML = "Good afternoon,"
 } else if (new Date().getHours() > 4) {
-    인사.innerHTML = "Good morning"
+    인사말.innerHTML = "Good morning,"
 } else {
-    인사.innerHTML = "Good night"
+    인사말.innerHTML = "Good night,"
 }

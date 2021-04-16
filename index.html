@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- <div class="askName">
+    <div class="이름묻기">
         <p>Hello, what's your name?</p>
         <form action="">
             <input type="text">
         </form>
-    </div> -->
-    <div class="바디마진">
+    </div>
+    <div class="바디마진 hide">
         <!-- 링크, 돋보기, 날씨  -->
         <nav class="메인네비">
             <div class="left">
@@ -34,7 +34,10 @@
         <!-- 시간, 메인 할일 -->
         <section class="메인섹션">
             <h1 class="현재시간"></h1>
-            <h2 class="인사">Good afternoon, 테일.</h2>
+            <div class="인사">
+                <h2 class="인사말"></h2>
+                <h2 class="이름"></h2>
+            </div>
             <h3>What is your main focus for today?</h3>
             <form class="핵심일폼" action="">
                 <input class="핵심일인풋" type="text">
@@ -70,5 +73,6 @@
     </div>
     <script src="time.js"></script>
     <script src="greet.js"></script>
+    <script src="askName.js"></script>
 </body>
 </html>
