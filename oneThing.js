@@ -35,3 +35,23 @@ function 핵심일폼에서밋되면할일(e) {
     원띵저장되어있으면할일();
 }
 
+
+// 체크박스를 누르면
+// 체크모양이 보이도록
+// 다시 누르면 안보이도록
+
+const oneThingModify = oneThingDiv.querySelector(".oneThing-Modify")
+const oneThingLabel = oneThingModify.querySelector("label")
+const oneThingCheckIcon = oneThingModify.querySelector("i")
+
+oneThingLabel.addEventListener("click", 체크표시만들기)
+
+function 체크표시만들기() {
+
+    if (oneThingCheckIcon.classList.contains("hide")) {
+        oneThingCheckIcon.classList.remove("hide")
+    } else {
+        oneThingCheckIcon.classList.add("hide")
+    }
+
+}
