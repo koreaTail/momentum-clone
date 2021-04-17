@@ -50,8 +50,12 @@ function 체크표시만들기() {
 
     if (oneThingCheckIcon.classList.contains("hide")) {
         oneThingCheckIcon.classList.remove("hide")
+        oneThing.classList.add("strikethrough")
     } else {
         oneThingCheckIcon.classList.add("hide")
+        oneThing.classList.remove("strikethrough")
     }
 
 }
+
+// 완료선(취소선) 추가

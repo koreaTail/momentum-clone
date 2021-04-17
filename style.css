@@ -33,6 +33,7 @@ body { height: 100vh; overflow: hidden; color: white; background-color:black; di
 .메인섹션 .oneThing .oneThing-Modify input[id="oneThingCheck"] { display: none;}
 .메인섹션 .oneThing .oneThing-Modify input[id="oneThingCheck"] + label { display: inline-block; width: 20px; height: 20px; border: 2px solid white; cursor: pointer; margin-right: 12px;}
 .메인섹션 .oneThing .oneThing-Modify .list { font-size: 38px; line-height: 0.4em;}
+.메인섹션 .oneThing .oneThing-Modify .list.strikethrough { text-decoration: line-through;}
 .메인섹션 .oneThing .oneThing-Modify button {margin-left: 12px;}
 
 .메인풋터 { display: flex; justify-content: space-between; align-items: center;}
