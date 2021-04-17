@@ -8,6 +8,8 @@ const oneThingModify = oneThingDiv.querySelector(".oneThing-Modify")
 const oneThingLabel = oneThingModify.querySelector("label")
 const oneThingCheckIcon = oneThingModify.querySelector("i")
 
+const oneThingCloseBtn = oneThingModify.querySelector("button")
+
 // 핵심일폼에 서밋되면 -1
 // 일단 새로고침 막고 -2
 // 질문과 인풋 숨기고 -3
@@ -55,21 +57,6 @@ function 체크표시하기() {
 // 완료선(취소선) 추가
 
 
-oneThingLabel.addEventListener("click", 체크표시핸들러)
-
-function 체크표시핸들러() {
-    if (oneThingCheckIcon.classList.contains("hide")) {
-        // 체크표시하기
-        체크표시하기();
-        localStorage.setItem("oneThingCheck", true)
-    } else {
-        // 체크없애기
-        oneThingCheckIcon.classList.add("hide")
-        oneThing.classList.remove("strikethrough")
-        localStorage.removeItem("oneThingCheck")
-    }
-}
-
 // 체크가 되어있는 상태를 저장해야해
 // 원띵이 체크되어있다고 입력하고, 불러와도 되고 '''이걸로 고고
 // 원띵 today에 같이 추가해서 forecah 로 불러와도 돼 '''쉽게가자 이건 말고
@@ -79,4 +66,33 @@ function 체크표시핸들러() {
 // 처음시작하면 체크했다고 저장한 기록 있으면 체크해줘
 // 없으면 말고
 
+// 좀 바꿔보자.
+// 로컬에 저장된걸 불러오는 방식으로
+// 클릭되면, 로컬에 저장해. 그리고 불러와.
 
+oneThingLabel.addEventListener("click", 체크표시핸들러)
+
+function 체크표시핸들러() {
+    if (localStorage.getItem("oneThingCheck") == null) {
+        // 체크표시하기
+        localStorage.setItem("oneThingCheck", true)
+        체크표시하기();
+    } else {
+        // 체크없애기
+        oneThingCheckIcon.classList.add("hide")
+        oneThing.classList.remove("strikethrough")
+        localStorage.removeItem("oneThingCheck")
+    }
+}
+
+
+// 엑스버튼을 누르면
+// 원띵 로컬에서사라지게
+// 원띵체크도 로컬에서 사라지게
+
+
+oneThingCloseBtn.addEventListener("click", 닫기버튼핸들러)
+
+function 닫기버튼핸들러() {
+    console.log("닫기버튼누름")
+}
