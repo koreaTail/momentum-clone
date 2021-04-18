@@ -15,4 +15,4 @@ function 인사말체크() {
     }
 }
 
-setInterval(인사말체크, 60000);
+setInterval(인사말체크, 1000);
