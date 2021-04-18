@@ -39,6 +39,7 @@ function 원띵저장되어있으면할일() {
     }
 }
 
+
 function 핵심일폼에서밋되면할일(e) {
     e.preventDefault();
     localStorage.setItem("oneThing", 핵심일인풋.value)
@@ -48,6 +49,7 @@ function 핵심일폼에서밋되면할일(e) {
 function 체크표시하기() {
     oneThingCheckIcon.classList.remove("hide")
     oneThing.classList.add("strikethrough")
+    oneThingCloseBtn.classList.add("rotate")
 }
 
 // 체크박스를 누르면
@@ -79,12 +81,16 @@ function 체크표시핸들러() {
         체크표시하기();
     } else {
         // 체크없애기
-        oneThingCheckIcon.classList.add("hide")
-        oneThing.classList.remove("strikethrough")
-        localStorage.removeItem("oneThingCheck")
+        체크표시해제하기();
     }
 }
 
+function 체크표시해제하기() {
+    oneThingCheckIcon.classList.add("hide")
+    oneThing.classList.remove("strikethrough")
+    oneThingCloseBtn.classList.remove("rotate")
+    localStorage.removeItem("oneThingCheck")
+}
 
 // 엑스버튼을 누르면
 // 원띵 로컬에서사라지게
@@ -94,5 +100,13 @@ function 체크표시핸들러() {
 oneThingCloseBtn.addEventListener("click", 닫기버튼핸들러)
 
 function 닫기버튼핸들러() {
-    console.log("닫기버튼누름")
+    localStorage.removeItem("oneThing")
+
+    핵심일질문.classList.remove("hide");
+    핵심일폼.classList.remove("hide");
+    oneThingDiv.classList.add("hide");
+    체크표시해제하기();
+
+    핵심일인풋.value = ``;
 }
+

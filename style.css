@@ -32,12 +32,12 @@ body { height: 100vh; overflow: hidden; color: white; background-color:black; di
 .메인섹션 .oneThing .oneThing-Modify i { position: absolute; left: 1px; font-size: 22px; z-index: -1;}
 .메인섹션 .oneThing .oneThing-Modify input[id="oneThingCheck"] { display: none;}
 .메인섹션 .oneThing .oneThing-Modify input[id="oneThingCheck"] + label { display: inline-block; width: 20px; height: 20px; border: 2px solid white; cursor: pointer; margin-right: 18px;}
-.메인섹션 .oneThing .oneThing-Modify .list { font-size: 38px;}
+.메인섹션 .oneThing .oneThing-Modify .list { font-size: 38px; margin-right: 8px;}
 .메인섹션 .oneThing .oneThing-Modify .list.strikethrough { text-decoration: line-through;}
-.메인섹션 .oneThing .oneThing-Modify button { display: flex; justify-content: center; align-items: center; background-color: black; border: none; width: 38px; height: 38px; margin-left: 8px;}
+.메인섹션 .oneThing .oneThing-Modify button { position: relative; background-color: black; border: none; width: 50px; height: 50px; border-radius: 50%;}
 .메인섹션 .oneThing .oneThing-Modify button:hover { background-color: rgba(255, 255, 255 , 0.3);}
-.메인섹션 .oneThing .oneThing-Modify button:focus { outline: none; transform-origin: center; transform: rotate(45deg);}
-.메인섹션 .oneThing .oneThing-Modify button .닫기표시 { font-size: 30px; color: white;}
+.메인섹션 .oneThing .oneThing-Modify button.rotate { outline: none; transform-origin: center; transform: rotate(45deg);}
+.메인섹션 .oneThing .oneThing-Modify button .닫기표시 { position: absolute; top: 3.2px; left: 13.3px; font-size: 30px; color: white;}
 .메인풋터 { display: flex; justify-content: space-between; align-items: center;}
 .메인풋터 .할일박스 {z-index: 10; position: absolute; right: 15px; bottom: 60px; display: flex; flex-direction: column; width: 350px; height: 250px; background-color: white; color: black; border-radius: 5px; padding:10px;}
 .메인풋터 .할일박스 nav { display: flex; justify-content: space-between; font-size: 20px; margin: 10px 10px 0px 10px;}
