@@ -9,6 +9,8 @@ const oneThingLabel = oneThingModify.querySelector("label")
 const oneThingCheckIcon = oneThingModify.querySelector("i")
 
 const oneThingCloseBtn = oneThingModify.querySelector("button")
+const compliment = oneThingDiv.querySelector(".compliment")
+
 
 // 핵심일폼에 서밋되면 -1
 // 일단 새로고침 막고 -2
@@ -79,6 +81,7 @@ function 체크표시핸들러() {
         // 체크표시하기
         localStorage.setItem("oneThingCheck", true)
         체크표시하기();
+        칭찬해주기();
     } else {
         // 체크없애기
         체크표시해제하기();
@@ -110,3 +113,34 @@ function 닫기버튼핸들러() {
     핵심일인풋.value = ``;
 }
 
+
+// // 마우스 오버시  아이콘 보이게
+oneThingDiv.addEventListener("mouseover", 마우스오버핸들러)
+oneThingDiv.addEventListener("mouseout", 마우스아웃핸들러)
+
+function 마우스오버핸들러() {
+    oneThingLabel.classList.remove("hide")
+    oneThingCloseBtn.classList.remove("hide")
+}
+
+function 마우스아웃핸들러() {
+
+    oneThingLabel.classList.add("hide")
+    oneThingCloseBtn.classList.add("hide")
+}
+
+
+
+// 완료 누르면, 말 나오게
+function 칭찬해주기() {
+    const ran = Math.floor(Math.random() * 4)
+    const 칭찬말보이기 = compliment.children[ran]
+
+    칭찬말보이기.classList.remove("hide")
+
+    function 칭찬말숨기기() {
+        칭찬말보이기.classList.add("hide")
+    }
+
+    setTimeout(칭찬말숨기기, 1500)
+}
