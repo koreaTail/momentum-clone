@@ -41,7 +41,7 @@ input:focus { outline: none;}
 .메인섹션 .oneThing .oneThing-Modify button .닫기표시 { top: 3.2px; left: 13.3px; font-size: 30px; color: white;}
 .메인풋터 { display: flex; justify-content: space-between; align-items: center;}
 .메인풋터 .할일박스 {z-index: 10; position: absolute; right: 15px; bottom: 60px; display: flex; flex-direction: column; width: 350px; height: 250px; background-color: white; color: black; border-radius: 5px; padding:10px;}
-.메인풋터 .할일박스 nav { display: flex; justify-content: space-between; font-size: 20px; margin: 10px 10px 0px 10px;}
+.메인풋터 .할일박스 nav { display: flex; justify-content: space-between; font-size: 20px; margin: 9px 9px 7px 9px;}
 
 .메인풋터 .할일박스 section { display: flex; flex-direction: column; justify-content: center; align-items: center; flex-grow:1;}
 .메인풋터 .할일박스 section h4 {font-size: 16px; margin-bottom: 5px; font-weight: 400;} 
@@ -50,9 +50,23 @@ input:focus { outline: none;}
 .메인풋터 .할일박스 section .할일시작버튼:focus { outline: none;}
 .메인풋터 .할일박스 section .할일시작버튼.누름 {background-color: white;}
 
+.메인풋터 .할일박스.할일입력됨{ height: inherit;}
+.메인풋터 .할일박스 section.할일입력됨 {align-items:stretch;}
+.메인풋터 .할일박스 section h4.할일입력됨 { display: none;}
+.메인풋터 .할일박스 section h5.할일입력됨 { display: none;}
+.메인풋터 .할일박스 section button.할일입력됨 { display: none;}
 
-.todo-footer { height: 20px; margin-bottom: 10px; margin-left: 10px;}
-.todo-footer form { display:flex; }
+
+
+.메인풋터 .할일박스 section ol { list-style: none; margin-left: 9px; margin-top: 2px; margin-bottom: 2px; margin-right: 9px; padding: 0; width: auto;}
+.메인풋터 .할일박스 section ol li { margin-top: 4px; margin-bottom: 4px;}
+.메인풋터 .할일박스 section ol li .할일하나 { display: flex; justify-content: space-between;}
+
+.메인풋터 .할일박스 section .할일1 { display:flex; align-items: center; margin-left: 10px;}
+.메인풋터 .할일박스 section .할일1 input { margin-right: 8px;}
+
+.todo-footer { height: 20px; margin: 7px 9px 9px 9px;}
+.todo-footer form { display:flex;}
 .todo-footer input { flex-grow: 1; font-size: 19px; color: rgb(104, 104, 104);}
 .todo-footer input::placeholder { color: rgb(175, 175, 175);}
 
