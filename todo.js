@@ -3,6 +3,12 @@
 const 할일버튼 = document.querySelector(".할일버튼")
 const 할일박스 = document.querySelector(".할일박스")
 
+const newTodo = 할일박스.querySelector(".할일시작버튼")
+const todoFooter = 할일박스.querySelector(".todo-footer")
+const todoForm = todoFooter.querySelector("form")
+
+console.log(todoForm)
+
 할일버튼.addEventListener("click", 할일박스버튼작동)
 
 function 할일박스버튼작동() {
@@ -16,4 +22,13 @@ function 할일박스버튼작동() {
 
 if (localStorage.getItem("할일박스상태") == "보여짐") {
     할일박스버튼작동();
+}
+
+
+newTodo.addEventListener("click", newTodo눌림시할일)
+
+function newTodo눌림시할일() {
+
+    newTodo.classList.add("누름")
+    todoForm.classList.remove("hide")
 }

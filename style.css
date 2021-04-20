@@ -42,13 +42,18 @@ input:focus { outline: none;}
 .메인풋터 { display: flex; justify-content: space-between; align-items: center;}
 .메인풋터 .할일박스 {z-index: 10; position: absolute; right: 15px; bottom: 60px; display: flex; flex-direction: column; width: 350px; height: 250px; background-color: white; color: black; border-radius: 5px; padding:10px;}
 .메인풋터 .할일박스 nav { display: flex; justify-content: space-between; font-size: 20px; margin: 10px 10px 0px 10px;}
+
 .메인풋터 .할일박스 section { display: flex; flex-direction: column; justify-content: center; align-items: center; flex-grow:1;}
 .메인풋터 .할일박스 section h4 {font-size: 16px; margin-bottom: 5px; font-weight: 400;} 
 .메인풋터 .할일박스 section h5 {font-size: 14px; margin-bottom: 16px; font-weight: 200; color: dimgray;} 
 .메인풋터 .할일박스 section .할일시작버튼 { width: 116px; height: 31px; border-radius: 10px; border: none; border-style: none; color: white; background-color: rgb(45,62,145); font-size: 14px;}
+.메인풋터 .할일박스 section .할일시작버튼:focus { outline: none;}
+.메인풋터 .할일박스 section .할일시작버튼.누름 {background-color: white;}
 
+
+.todo-footer { height: 20px; margin-bottom: 10px; margin-left: 10px;}
 .todo-footer form { display:flex; }
-.todo-footer input { flex-grow: 1; font-size: 20px; color: rgb(104, 104, 104);}
+.todo-footer input { flex-grow: 1; font-size: 19px; color: rgb(104, 104, 104);}
 .todo-footer input::placeholder { color: rgb(175, 175, 175);}
 
 .메인풋터 .말풍선만들기 { position: absolute; right: 20px; bottom: -5px; width: 15px; height: 15px; background-color: white; transform: rotate(45deg); z-index: -10;}
