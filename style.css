@@ -74,4 +74,3 @@ input:focus { outline: none;}
 .메인풋터 .할일버튼 { border: none; border-style: none; background-color: black; color: white; font-size: 17px;}
 
 .hide { display: none; opacity: 0; height: 0px;}
-.strikethrough { text-decoration: line-through;}
