@@ -74,13 +74,14 @@ function 할일입력되면할일(e) {
         ID: new Date
     }
 
-    localStorage.setItem(`todo-${할일Ol.childElementCount}`, JSON.stringify(localValue))
+    localStorage.setItem(`todo-${new Date}`, JSON.stringify(localValue))
 
     todoInput.value = "";
 }
 
-for (let i = 1; i < 100; i++)
-    if (localStorage.getItem(`todo-${i}`) !== null) {
+for (let i = 1; i < 100; i++) {
+    // 이름파트 수정하기
+    if (localStorage.getItem(`이름`) !== null) {
         newTodo눌림시할일();
         클래스할일입력됨추가하기();
         let makeLi = document.createElement("li")
@@ -93,7 +94,7 @@ for (let i = 1; i < 100; i++)
         </span>`
         할일Ol.appendChild(makeLi);
     }
-
+}
 
 할일Ol.addEventListener("change", 체크)
 
