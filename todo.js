@@ -74,41 +74,71 @@ function 할일입력되면할일(e) {
         ID: 할일Ol.childElementCount
     }
 
-    localStorage.setItem(`todo-${할일Ol.childElementCount}`, JSON.stringify(localValue))
+    localStorage.setItem(`todo${할일Ol.childElementCount}`, JSON.stringify(localValue))
 
     todoInput.value = "";
 }
 
-for (let i = 1; i < 100; i++)
-    if (localStorage.getItem(`todo-${i}`) !== null) {
+
+for (let i = 0; i < localStorage.length; i++) {
+    let key = localStorage.key(i);
+    let value = localStorage[key];
+    // console.log(`localStorage ${key} : ${value}`);
+
+    if (localStorage.getItem(`todo${i}`) !== null) {
         newTodo눌림시할일();
         클래스할일입력됨추가하기();
         let makeLi = document.createElement("li")
-        makeLi.innerHTML = `<span id=${JSON.parse(localStorage.getItem(`todo-${i}`)).ID}>
+        const todo = JSON.parse(localStorage.getItem(`todo${i}`))
+
+        makeLi.innerHTML = `<span id=todo${i}>
         <div class="left">
             <input type="checkbox">
-                <span>${JSON.parse(localStorage.getItem(`todo-${i}`)).title}</span>
+                <span>${todo.title}</span>
             </div>
             <i class="fas fa-ellipsis-h"></i>
-        </span>`
+        </span>`;
         할일Ol.appendChild(makeLi);
+
+        // console.log(todo)
+        if (todo.체크) {
+            const checkbox = makeLi.querySelector("input");
+            checkbox.checked = true;
+            취소선넣기(checkbox)
+        }
     }
+}
 
 
 할일Ol.addEventListener("change", 체크)
 
 function 체크(e) {
-    e.target.parentElement.children[1].style.color = "#7f8c8d"
-    e.target.parentElement.children[1].classList.add("strikethrough")
-    console.dir(e.target.parentElement.parentElement.id)
 
-    let 아이디라하자 = `todo-${e.target.parentElement.parentElement.id}`
-    console.log(localStorage.getItem(아이디라하자))
+    const checkbox = e.target;
 
-
+    if (checkbox.checked) {
+        취소선넣기(checkbox);
+    } else {
+        취소선빼기(checkbox);
+    }
 }
 
-// 아이디를 넣어주지 않으면.. 구분하기가 힘들어.. ㅡㅡ;
-// 아이디를 어떻게 넣어주냐는 중요해.. 겹치지 않아야해..
+function 취소선넣기(checkbox) {
+    checkbox.parentElement.children[1].style.color = "#7f8c8d"
+    checkbox.parentElement.children[1].classList.add("strikethrough")
 
-// key 이름을 어떻게 할지 고민중
+    const id = checkbox.parentElement.parentElement.id;
+    const todo = JSON.parse(localStorage.getItem(id));
+    todo.체크 = true;
+    localStorage.setItem(id, JSON.stringify(todo))
+}
+
+function 취소선빼기(checkbox) {
+    checkbox.parentElement.children[1].style.color = "#000000"
+    checkbox.parentElement.children[1].classList.remove("strikethrough")
+
+    const id = checkbox.parentElement.parentElement.id;
+    const todo = JSON.parse(localStorage.getItem(id))
+    todo.체크 = false;
+    localStorage.setItem(id, JSON.stringify(todo))
+}

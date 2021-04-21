@@ -60,7 +60,7 @@ input:focus { outline: none;}
 
 .메인풋터 .할일박스 section ol { list-style: none; margin-left: 9px; margin-top: 2px; margin-bottom: 2px; margin-right: 9px; padding: 0; width: auto;}
 .메인풋터 .할일박스 section ol li { margin-top: 4px; margin-bottom: 4px;}
-.메인풋터 .할일박스 section ol li .할일하나 { display: flex; justify-content: space-between;}
+.메인풋터 .할일박스 section ol li >span { display: flex; justify-content: space-between;}
 
 .메인풋터 .할일박스 section .할일1 { display:flex; align-items: center; margin-left: 10px;}
 .메인풋터 .할일박스 section .할일1 input { margin-right: 8px;}
