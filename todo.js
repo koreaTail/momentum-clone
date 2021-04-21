@@ -58,7 +58,7 @@ function 할일입력되면할일(e) {
     let makeLi = document.createElement("li")
 
     makeLi.innerHTML =
-        `<span class=${new Date}>
+        `<span id=${할일Ol.childElementCount + 1}>
             <div class="left">
                 <input type="checkbox">
                 <span>${todoInput.value}</span>
@@ -71,7 +71,7 @@ function 할일입력되면할일(e) {
         title: todoInput.value,
         체크: false,
         삭제: false,
-        ID: new Date
+        ID: 할일Ol.childElementCount
     }
 
     localStorage.setItem(`todo-${할일Ol.childElementCount}`, JSON.stringify(localValue))
@@ -84,7 +84,7 @@ for (let i = 1; i < 100; i++)
         newTodo눌림시할일();
         클래스할일입력됨추가하기();
         let makeLi = document.createElement("li")
-        makeLi.innerHTML = `<span class=${JSON.parse(localStorage.getItem(`todo-${i}`)).ID}>
+        makeLi.innerHTML = `<span id=${JSON.parse(localStorage.getItem(`todo-${i}`)).ID}>
         <div class="left">
             <input type="checkbox">
                 <span>${JSON.parse(localStorage.getItem(`todo-${i}`)).title}</span>
@@ -100,7 +100,7 @@ for (let i = 1; i < 100; i++)
 function 체크(e) {
     e.target.parentElement.children[1].style.color = "#7f8c8d"
     e.target.parentElement.children[1].classList.add("strikethrough")
-    console.dir(e.target.parentElement.parentElement.className)
+    console.dir(e.target.parentElement.parentElement.id)
 }
 
 // 아이디를 넣어주지 않으면.. 구분하기가 힘들어.. ㅡㅡ;
