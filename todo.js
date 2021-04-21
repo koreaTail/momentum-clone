@@ -101,6 +101,11 @@ function 체크(e) {
     e.target.parentElement.children[1].style.color = "#7f8c8d"
     e.target.parentElement.children[1].classList.add("strikethrough")
     console.dir(e.target.parentElement.parentElement.id)
+
+    let 아이디라하자 = `todo-${e.target.parentElement.parentElement.id}`
+    console.log(localStorage.getItem(아이디라하자))
+
+
 }
 
 // 아이디를 넣어주지 않으면.. 구분하기가 힘들어.. ㅡㅡ;
