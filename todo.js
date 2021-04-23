@@ -96,6 +96,16 @@ for (let i = 1; i < localStorage.length; i++) {
             <i class="fas fa-ellipsis-h"></i>
         </span>`
         할일Ol.appendChild(makeLi);
+
+        // 체크표시가 있는지 확인하고, true면 체크, false면 무반응
+        // if(`todo${i}`)=
+        console.log(JSON.parse(todo).체크)
+        if (JSON.parse(todo).체크) {
+            // 반대로 로컬에 있는 놈이 뭘 가리키고 있는지 알려주고, 그놈을 지적해서.. 체크표시를 해줘야해.. 
+            // 근데.. 멘토는 그걸 무척 쉽게 했다.. ㅠ
+            // e.target.parentElement.children[1].style.color = "#7f8c8d"
+            // e.target.parentElement.children[1].classList.add("strikethrough")
+        }
     }
 }
 
@@ -104,21 +114,25 @@ for (let i = 1; i < localStorage.length; i++) {
 function 체크(e) {
 
     const targetLocalKey = e.target.parentElement.parentElement.className
+    const 로컬todo데이터 = JSON.parse(localStorage.getItem(targetLocalKey));
+
+
     // 체크안되어있으면, 체크 되도록
     // 체크되어있으면, 체크 안되도록
     if (e.target.checked) {
         e.target.parentElement.children[1].style.color = "#7f8c8d"
         e.target.parentElement.children[1].classList.add("strikethrough")
 
-        JSON.parse(localStorage.setItem(targetLocalKey)).체크 = "true"
-        console.log(JSON.parse(localStorage.getItem(targetLocalKey)).체크)
+
+        로컬todo데이터.체크 = true;
+        localStorage.setItem(targetLocalKey, JSON.stringify(로컬todo데이터))
     } else {
         e.target.parentElement.children[1].style.color = "#000000"
         e.target.parentElement.children[1].classList.remove("strikethrough")
 
-        JSON.parse(localStorage.getItem(targetLocalKey)).체크 = false
+        로컬todo데이터.체크 = false;
+        localStorage.setItem(targetLocalKey, JSON.stringify(로컬todo데이터))
     }
-
 }
 
 
