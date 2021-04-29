@@ -13,7 +13,7 @@ input:focus { outline: none;}
 
 .메인네비 { display: flex; justify-content: space-between; align-items:flex-start;}
 .메인네비 .left { display: flex; align-items: center; font-size: 17px;}
-.메인네비 .left i{ margin: 8px; font-size: 15px;}
+.메인네비 .left i { margin: 8px; font-size: 15px; cursor: pointer;}
 .메인네비 .right { display: flex; flex-direction: column;}
 .메인네비 .right .up i { font-size: 22px;}
 .메인네비 .right .up strong { font-size: 27px;}
@@ -38,7 +38,7 @@ input:focus { outline: none;}
 .메인섹션 .oneThing .oneThing-Modify button { position: absolute; right: -60px; background-color: black; border: none; width: 50px; height: 50px; border-radius: 50%;}
 .메인섹션 .oneThing .oneThing-Modify button:hover { background-color: rgba(255, 255, 255 , 0.3);}
 .메인섹션 .oneThing .oneThing-Modify button.rotate { outline: none; transform-origin: center; transform: rotate(45deg);}
-.메인섹션 .oneThing .oneThing-Modify button .닫기표시 { top: 3.2px; left: 13.3px; font-size: 30px; color: white;}
+.메인섹션 .oneThing .oneThing-Modify button .닫기표시 { top: 3.2px; left: 13.3px; font-size: 30px; color: white; cursor: pointer;}
 .메인풋터 { display: flex; justify-content: space-between; align-items: center;}
 .메인풋터 .할일박스 {z-index: 10; position: absolute; right: 15px; bottom: 60px; display: flex; flex-direction: column; width: 350px; height: 250px; background-color: white; color: black; border-radius: 5px; padding:10px;}
 .메인풋터 .할일박스 nav { display: flex; justify-content: space-between; font-size: 20px; margin: 9px 9px 7px 9px;}
@@ -55,12 +55,14 @@ input:focus { outline: none;}
 .메인풋터 .할일박스 section h4.할일입력됨 { display: none;}
 .메인풋터 .할일박스 section h5.할일입력됨 { display: none;}
 .메인풋터 .할일박스 section button.할일입력됨 { display: none;}
+.메인풋터 .right .할일버튼 { cursor: pointer;}
 
 
 
 .메인풋터 .할일박스 section ol { list-style: none; margin-left: 9px; margin-top: 2px; margin-bottom: 2px; margin-right: 9px; padding: 0; width: auto;}
 .메인풋터 .할일박스 section ol li { margin-top: 4px; margin-bottom: 4px;}
 .메인풋터 .할일박스 section ol li >span { display: flex; justify-content: space-between;}
+.메인풋터 .할일박스 section ol li >span i:hover { cursor: pointer;}
 
 .메인풋터 .할일박스 section .할일1 { display:flex; align-items: center; margin-left: 10px;}
 .메인풋터 .할일박스 section .할일1 input { margin-right: 8px;}
